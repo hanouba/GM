@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/app_size_one"
+    android:background="@color/white"
+    tools:context=".modular.dynamicsDetail.view.DynamicsDetailAct">
+
+    <include
+        android:id="@+id/dynamics_item"
+        layout="@layout/act_detail_dynamics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_comment_tip"
+        android:layout_below="@+id/dynamics_item"
+        android:layout_marginTop="40px"
+        android:layout_width="wrap_content"
+        android:text="评论"
+        android:textSize="@dimen/app_size_one"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content" />
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_comment_tip"
+        android:layout_marginTop="8px"
+        android:background="@color/gray_one" />
+
+</RelativeLayout>

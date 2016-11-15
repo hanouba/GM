@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    tools:context=".modular.prepareModule.selectGame.view.SelectGameAct">
+
+    <RelativeLayout
+        android:id="@+id/rl_act_select_game_tip_container"
+        android:layout_width="match_parent"
+        android:layout_height="294px">
+
+        <TextView
+            android:id="@+id/tv_act_select_game_tip_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="请选择您感兴趣的标签"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+
+
+        <TextView
+            android:id="@+id/tv_act_select_game_tip_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_act_select_game_tip_one"
+            android:layout_marginTop="26px"
+            android:gravity="center"
+            android:text="我们将根据您的标签为您推送内容"
+            android:textColor="@color/white"
+            android:textSize="18px" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_act_select_game_one"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/rl_act_select_game_tip_container"
+        android:background="#cd3644" />
+
+    <!--用于显示待选择的标签-->
+    <GridView
+        android:id="@+id/gv_act_select_game"
+        android:layout_width="match_parent"
+        android:layout_height="308px"
+        android:layout_below="@+id/view_act_select_game_one"
+        android:background="@color/white"
+        android:numColumns="3" />
+
+
+    <View
+        android:id="@+id/view_act_select_game_two"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/gv_act_select_game"
+        android:background="#cd3644" />
+
+    <TextView
+        android:id="@+id/tv_act_select_game_selected"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:layout_below="@+id/view_act_select_game_two"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/app_size_one"
+        android:text="已添加的游戏(0)"
+        android:textColor="@color/white"
+        android:textSize="22px" />
+
+
+    <!--用于显示已经选择的标签的-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/gv_act_select_game_selected"
+        android:layout_width="match_parent"
+        android:layout_height="102px"
+        android:layout_below="@+id/tv_act_select_game_selected"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gv_act_select_game_selected"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_act_select_game_selecte_other_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/app_size_one"
+            android:text="其他感兴趣的游戏"
+            android:textColor="@color/common_app_color"
+            android:textSize="18px" />
+
+        <Button
+            android:id="@+id/bt_complete"
+            android:layout_width="310px"
+            android:layout_height="58px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="88px"
+            android:background="@drawable/select_game_open_second_world_bg"
+            android:gravity="center"
+            android:text="开启第二世界"
+            android:textColor="@color/white"
+            android:textSize="26px" />
+
+    </RelativeLayout>
+
+    <!--这个控件主要是为了显示在最顶层,动画就是这个动的,完毕之后就还原了-->
+    <include layout="@layout/act_select_game_flow_label_item" />
+
+</RelativeLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.yoursecondworld.secondworld.modular.postDynamics.view.PostDynamicsAct">
+
+    <!--标题栏部分-->
+    <include layout="@layout/red_titlebar_style_two" />
+
+    <!--标题栏以下的内容-->
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/white">
+
+        <!--显示编辑区的内容-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_foot"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--用于编辑文本-->
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:minLines="3"
+                    android:padding="@dimen/app_size_one" />
+
+                <!--放任何的控件,不过暂时放图片控件,显示九宫格的样子-->
+                <com.yoursecondworld.secondworld.modular.postDynamics.widget.ShowImagesViewForPostDynamics
+                    android:id="@+id/view_images_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_size_one" />
+
+                <!--显示视频的信息-->
+                <RelativeLayout
+                    android:id="@+id/rl_show_video_info"
+                    android:layout_width="400px"
+                    android:layout_height="300px"
+                    android:layout_marginLeft="@dimen/app_size_one"
+                    android:background="@color/black"
+                    android:visibility="gone">
+
+                    <!--显示视频第一针画面-->
+                    <ImageView
+                        android:id="@+id/iv_show_video_first_frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter" />
+
+                    <!--显示播放按钮-->
+                    <ImageView
+                        android:layout_width="64px"
+                        android:layout_height="64px"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/video2" />
+
+                    <!--显示视频的基本信息-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_two"
+                        android:paddingLeft="14px"
+                        android:paddingRight="14px">
+
+                        <TextView
+                            android:id="@+id/tv_filesize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+
+                        <TextView
+                            android:id="@+id/tv_video_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--底部的几个小控件-->
+        <RelativeLayout
+            android:id="@+id/rl_foot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:animateLayoutChanges="true">
+
+            <!--显示选择的两个标签和剁手的时候的金额-->
+            <RelativeLayout
+                android:id="@+id/rl_content_foot_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14px"
+                android:paddingLeft="@dimen/app_size_one"
+                android:paddingRight="@dimen/app_size_one">
+
+                <TextView
+                    android:id="@+id/tv_content_foot_one_label_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/act_post_dynamics_label_one"
+                    android:padding="4px"
+                    android:text="皇室战争"
+                    android:textColor="@color/common_app_color"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:id="@+id/tv_content_foot_one_label_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@+id/tv_content_foot_one_label_one"
+                    android:background="@drawable/act_post_dynamics_label_two"
+                    android:padding="4px"
+                    android:text="剁手时刻"
+                    android:textColor="@color/common_app_color"
+                    android:textSize="18px"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_money_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_content_foot_one_tip_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="剁手金额："
+                        android:textSize="18px" />
+
+                    <EditText
+                        android:id="@+id/et_content_foot_money"
+                        android:layout_width="108px"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_content_foot_one_tip_one"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:enabled="false"
+                        android:inputType="numberSigned"
+                        android:textColor="@color/common_app_color"
+                        android:textSize="18px" />
+
+                    <View
+                        android:layout_width="108px"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/et_content_foot_money"
+                        android:layout_toRightOf="@+id/tv_content_foot_one_tip_one"
+                        android:background="@color/gray_two" />
+
+                    <TextView
+                        android:id="@+id/tv_content_foot_one_tip_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/et_content_foot_money"
+                        android:text="元"
+                        android:textSize="18px" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--显示五个图标的-->
+            <LinearLayout
+                android:id="@+id/rl_content_foot_two"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_below="@+id/rl_content_foot_one"
+                android:background="@color/gray_one"
+                android:orientation="horizontal">
+
+                <!--图片按钮-->
+                <RelativeLayout
+                    android:id="@+id/rl_content_foot_two_image"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="34px"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/image1" />
+
+                </RelativeLayout>
+
+                <!--视频按钮-->
+                <RelativeLayout
+                    android:id="@+id/rl_content_foot_two_video"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="64px"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/video1" />
+                </RelativeLayout>
+
+                <!--表情按钮-->
+                <RelativeLayout
+                    android:id="@+id/rl_content_foot_two_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="64px"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/emoji1" />
+                </RelativeLayout>
+
+                <!--长文-->
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_content_foot_two_longtext"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40px"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="长文"-->
+                <!--android:textSize="28px" />-->
+
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+
+            <!--用于显示图片选择和表情的选择-->
+            <FrameLayout
+                android:id="@+id/fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_content_foot_two"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

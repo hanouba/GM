@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48px"
+        android:background="@color/gray_two"
+        android:gravity="center"
+        android:text="编辑游戏标签"
+        android:textSize="@dimen/app_size_one" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_size_one">
+
+        <TextView
+            android:id="@+id/tv_tip_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13px"
+            android:text="已选择:" />
+
+        <GridView
+            android:id="@+id/rv_selected_game"
+            android:layout_width="match_parent"
+            android:layout_height="128px"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@+id/tv_tip_one"
+            android:numColumns="3" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_size_one">
+
+        <TextView
+            android:id="@+id/tv_tip_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13px"
+            android:text="未选择:" />
+
+        <GridView
+            android:id="@+id/rv_unselected_game"
+            android:layout_width="match_parent"
+            android:layout_height="128px"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@+id/tv_tip_two"
+            android:numColumns="3" />
+
+    </RelativeLayout>
+
+</LinearLayout>

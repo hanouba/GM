@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context=".modular.prepareModule.selectPlayer.ui.SelectPlayerAct">
+
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_foot"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red_one"
+        android:textColor="@color/white"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="开启GM" />
+
+</RelativeLayout>

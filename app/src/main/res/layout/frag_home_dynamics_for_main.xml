@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_one">
+
+    <!--最上面的热门标签和我的关注-->
+    <RelativeLayout
+        android:id="@+id/rl_act_main_head"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/common_app_color">
+
+        <LinearLayout
+            android:layout_width="250px"
+            android:layout_height="48px"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18px"
+            android:background="@drawable/main_head_swith_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_act_main_head_hot_dynamics"
+                style="@style/main_head_text_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_head_swith_hot_dynamics_selected_bg"
+                android:text="热门"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_act_main_head_my_attention"
+                style="@style/main_head_text_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_head_swith_my_attention_unselected_bg"
+                android:text="关注"
+                android:textColor="#88FFFFFF" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--android原生的下拉刷新-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sr_frag_home_dynamics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_main_head">
+
+        <!--显示内容的RecyclerView-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_frag_home_dynamics_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_frag_home_dynamics_head"
+            android:layout_marginTop="14px"
+            android:overScrollMode="never" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

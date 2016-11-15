@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        secondworld {
+            keyAlias 'android.keystore'
+            keyPassword 'secondworld'
+            storeFile file('D:/code/android.keystore')
+            storePassword 'secondworld'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+    defaultConfig {
+        applicationId "com.yoursecondworld.secondworld"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 5
+        versionName "1.2.1"
+        //bugly需要配置的
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.secondworld
+        }
+        debug {
+            signingConfig signingConfigs.secondworld
+        }
+    }
+    repositories {
+//        maven { url "https://jitpack.io" }
+    }
+}
+
+//所有的依赖
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.facebook.fresco:fresco:0.9.0+'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile project(':IMKit')
+    compile 'com.android.support:design:+'
+    //阿里云的
+    compile files('libs/aliyun-oss-sdk-android-2.2.0.jar')
+    //解析拼音的
+    compile files('libs/pinyin4j-2.5.0.jar')
+    //社会化分享的
+    compile files('libs/MobCommons-2016.0830.1940.jar')
+    compile files('libs/MobTools-2016.0830.1940.jar')
+    compile files('libs/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.7.7.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.7.jar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile files('libs/jpush-android-2.1.5.jar')
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //集成友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //引入自己的图片库,替换了原有的第三方,如果出现了问题也容易修改
+    compile 'com.xiaojinzi:ximagelib:1.0.2'
+}
+
+//bugly需要配置的
+dependencies {
+    //compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    //compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    compile 'com.tencent.bugly:crashreport:2.1.9'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:3.0'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+}

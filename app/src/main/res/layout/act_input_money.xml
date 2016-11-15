@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#98000000"
+    tools:context="com.yoursecondworld.secondworld.modular.postDynamics.view.InputMoneyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入你的氪金数"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <RelativeLayout
+            android:layout_width="480px"
+            android:layout_height="80px"
+            android:layout_marginTop="100px"
+            android:background="@drawable/act_input_money_et_input_bg">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="点击输入金额 (元)"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="360px"
+            android:layout_height="72px"
+            android:layout_marginTop="240px"
+            android:background="@drawable/common_bt_bg"
+            android:onClick="confirm"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <Button
+            android:layout_width="360px"
+            android:layout_height="72px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/act_input_money_cancel_bg"
+            android:onClick="cancel"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

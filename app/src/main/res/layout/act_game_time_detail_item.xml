@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_six"
+    android:paddingBottom="10px"
+    android:paddingLeft="20px"
+    android:paddingRight="20px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="166px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:src="@mipmap/rili_red1" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="80px"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@+id/iv1"
+            android:text="9-21"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_two" />
+
+        <View
+            android:id="@+id/view_split_line"
+            android:layout_width="1dp"
+            android:layout_height="80px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="34px"
+            android:layout_toRightOf="@+id/tv_date"
+            android:background="@color/gray_six" />
+
+        <TextView
+            android:id="@+id/tv_game"
+            android:layout_width="180px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28px"
+            android:layout_toRightOf="@+id/view_split_line"
+            android:text="诛仙手游"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_two" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="440px"
+            android:text="游戏时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_two" />
+
+        <TextView
+            android:id="@+id/tv_time_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_toRightOf="@+id/tv_time"
+            android:text="-h1"
+            android:textColor="@color/red_one"
+            android:textSize="@dimen/app_text_size_two" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_bg"
+    tools:context=".modular.setting.videoPlaySetting.ui.VideoPlaySettingAct">
+
+    <!--标题栏部分-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30px"
+            android:orientation="vertical">
+
+            <!--默认设置-->
+            <RelativeLayout
+                android:id="@+id/rl_act_setting_video_play_default_container"
+                style="@style/setting_item">
+
+                <TextView
+                    android:id="@+id/tv_act_setting_video_play_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="默认"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_act_setting_video_play_default"
+                    android:layout_marginTop="2px"
+                    android:text="仅在Wi-Fi下自动播放"
+                    android:textSize="18px" />
+
+                <ImageView
+                    android:id="@+id/iv_act_setting_video_play_default"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/setting_video_play_selected" />
+
+            </RelativeLayout>
+
+            <!--分割线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/setting_split_line_bg" />
+
+            <!--仅3G/4G/Wi-Fi下自动播放-->
+            <RelativeLayout
+                android:id="@+id/rl_act_setting_video_play_three_four_wifi_container"
+                style="@style/setting_item">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="仅3G/4G/Wi-Fi下自动播放"
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:id="@+id/iv_act_setting_video_play_three_four_wifi"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/setting_video_play_selected" />
+
+            </RelativeLayout>
+
+            <!--分割线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/setting_split_line_bg" />
+
+            <!--不自动播放-->
+            <RelativeLayout
+                android:id="@+id/rl_act_setting_video_play_not_auto_play_container"
+                style="@style/setting_item">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="不自动播放"
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:id="@+id/iv_act_setting_video_play_not_auto_play"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/setting_video_play_selected" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

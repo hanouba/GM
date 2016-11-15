@@ -1,0 +1,7 @@
+Model:数据处理层面,这里处理复杂的数据,将处理好的数据交由Presenter
+Presnter:个人理解这个是用来根据Model的返回值来决定该让View层面做什么操作.说白了就是View层的操作完全取决于Presneter的指令(方法调用)
+View:和用户交互的视图层,除了与试图交互的其他的逻辑全部交由Presenter来操作
+
+Activity实现View接口,一个Activity对应一个View接口和一个对应的Presneter,之前我总结的时候说Presneter可以公用,现在发现分开更好,Model公用就可以了
+
+当然了,根据项目的需求,有些时候每一个activity都必须有一些行为,比如本App中的session失效的行为,这就需要定义在IBaseView中供给各个View接口继承

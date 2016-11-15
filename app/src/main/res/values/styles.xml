@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="pictureSelectTheme" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--设置界面的那些条目的样式-->
+    <style name="setting_item">
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">24px</item>
+        <item name="android:paddingTop">10px</item>
+        <item name="android:paddingRight">24px</item>
+        <item name="android:paddingBottom">10px</item>
+        <item name="android:layout_height">76px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="sp_sex_style" >
+        <item name="android:textSize">4px</item>
+    </style>
+
+    <!--设置界面右箭头的样式-->
+    <style name="setting_item_arrow_right_size">
+        <item name="android:layout_width">25px</item>
+        <item name="android:layout_height">16px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/arrow_right_gray</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <!--主界面的头部的文本的样式-->
+    <style name="main_head_text_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24px</item>
+    </style>
+
+    <!--主界面的底部的radiobutton的样式-->
+    <style name="main_foot_radio_button_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--暂时无用-->
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/edit_person_popup_slid_in</item>
+        <item name="android:windowExitAnimation">@anim/edit_person_popup_slid_out</item>
+    </style>
+
+</resources>

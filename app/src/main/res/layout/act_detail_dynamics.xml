@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20px"
+    android:paddingLeft="32px"
+    android:paddingRight="32px"
+    android:paddingTop="14px">
+
+    <RelativeLayout
+        android:id="@+id/rl_dynamics_content_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!--用户的图标-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_dynamics_content_item_user_icon"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginRight="32px"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:roundAsCircle="true" />
+
+        <!--用户名-->
+        <TextView
+            android:id="@+id/tv_dynamics_content_item_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_dynamics_content_item_user_icon"
+            android:text="去吧皮卡丘"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+        <ImageView
+            android:id="@+id/iv_dynamics_content_item_user_sex"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_marginLeft="6px"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/tv_dynamics_content_item_user_name"
+            android:src="@mipmap/sex_man_one" />
+
+        <!--第一个显示游戏的标签-->
+        <TextView
+            android:id="@+id/tv_dynamics_content_item_game_label_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_dynamics_content_item_user_icon"
+            android:layout_toRightOf="@+id/iv_dynamics_content_item_user_icon"
+            android:background="@drawable/dynamics_item_label_one_bg"
+            android:padding="4px"
+            android:text="皇室战争"
+            android:textColor="@color/common_app_color"
+            android:textSize="17px" />
+
+        <!--第二个显示游戏的标签-->
+        <TextView
+            android:id="@+id/tv_dynamics_content_item_topic_label_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_dynamics_content_item_user_icon"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_dynamics_content_item_game_label_name"
+            android:background="@drawable/dynamics_item_label_two_bg"
+            android:padding="4px"
+            android:text="show time"
+            android:textColor="@color/dynamics_item_label_two"
+            android:textSize="17px"
+            android:visibility="gone" />
+
+        <!--显示时间的文本-->
+        <TextView
+            android:id="@+id/tv_dynamics_content_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2016-5-18"
+            android:textSize="16px" />
+
+        <!--向下的小箭头-->
+        <ImageView
+            android:id="@+id/iv_dynamics_content_item_arrow_bottom"
+            android:layout_width="60px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_dynamics_content_item_date"
+            android:paddingLeft="40px"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:paddingRight="0dp"
+            android:src="@mipmap/arrow_bottom_gray1" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/view_dynamics_content_item_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_dynamics_content_item_header"
+        android:layout_marginTop="20px"
+        android:background="@color/gray_one" />
+
+    <!--文章内容-->
+    <TextView
+        android:id="@+id/tv_dynamics_content_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dynamics_content_item_split_line"
+        android:layout_marginTop="28px"
+        android:gravity="center_vertical"
+        android:text="生化危机: 保护伞军团》将于本月23日正是解锁,而作为一款主打竞技射击的线上多人游戏,联网性......"
+        android:textColor="@color/black" />
+
+    <!--全文提示文本-->
+    <TextView
+        android:id="@+id/tv_dynamics_content_item_all_text_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dynamics_content_item_content"
+        android:layout_marginTop="28px"
+        android:padding="4px"
+        android:text="全文"
+        android:textColor="@color/common_app_color"
+        android:textSize="24px" />
+
+    <!--用于显示图片-->
+    <xiaojinzi.view.CommonNineView
+        android:id="@+id/cnv_dynamics_content_item_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dynamics_content_item_all_text_tip"
+        android:layout_marginTop="32px"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnv_dynamics_content_item_images"
+        android:layout_marginTop="32px">
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_play_video"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/video2" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

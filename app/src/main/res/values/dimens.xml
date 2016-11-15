@@ -1,0 +1,91 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--小的文字大小-->
+    <dimen name="small_text_size">12sp</dimen>
+    <!--基本的文字大小-->
+    <dimen name="base_text_size">16sp</dimen>
+    <!--常用的文字大小-->
+    <dimen name="normal_text_size">22sp</dimen>
+    <!--最小的内边距-->
+    <dimen name="most_small_padding">4dp</dimen>
+    <!--小的内边距-->
+    <dimen name="small_padding">8dp</dimen>
+    <!--基本的内边距-->
+    <dimen name="base_padding">16dp</dimen>
+    <!--较大的内边距-->
+    <dimen name="big_padding">22dp</dimen>
+    <!--小的内边距-->
+    <dimen name="small_margin">12dp</dimen>
+    <!--基本的外边距-->
+    <dimen name="base_margin">16dp</dimen>
+    <!--大一点的外边距-->
+    <dimen name="big_margin">22dp</dimen>
+
+
+    <!--标题栏的高度,不包括上面的状态栏-->
+    <dimen name="titlebar_height">88px</dimen>
+
+    <!--标题栏中的标题文字的大小-->
+    <dimen name="titlebar_title_text_size">34px</dimen>
+
+    <!--标题栏中的除了标题之外的文字的大小-->
+    <dimen name="titlebar_text_size">24px</dimen>
+
+    <!--标题栏左右两边的内边距-->
+    <dimen name="titlebar_left_and_right_padding">24px</dimen>
+    <!--返回图标的上下边距-->
+    <dimen name="titlebar_iv_top_and_bottom_padding">20px</dimen>
+
+    <!--关于返回按钮的-->
+    <dimen name="iv_back_width">80px</dimen>
+    <dimen name="iv_back_height">88px</dimen>
+    <dimen name="iv_back_left_margin">10dp</dimen>
+
+    <!--下面是登陆界面能用到的数据-->
+
+    <!--以下是设置个人资料的界面用到的数据-->
+
+    <!--主界面的-->
+    <dimen name="act_main_foot_image_and_text_horizontal_space">8px
+    </dimen><!--主界面的导航栏中的图标和文字的竖直间距-->
+
+    <!--热门动态的使用到的-->
+    <!--标签之间的边距-->
+    <dimen name="frag_hot_dynamics_labels_item_horizontal_space">22px</dimen><!--在清单文件中的设计图的大小-->
+    <!--标签右边的箭头-->
+    <dimen name="frag_hot_dynamics_labels_right_arrow_size">63px</dimen><!--在清单文件中的设计图的大小-->
+    <!--recyclerView的条目之间的竖直距离-->
+    <dimen name="frag_hot_dynamics_listview_item_space">20px</dimen><!--在清单文件中的设计图的大小-->
+
+    <!--recyclerView的条目中的多张图片的横向间距-->
+    <dimen name="dynamics_recyclerview_item_image_horizontal_space_space">9px
+    </dimen><!--在清单文件中的设计图的大小-->
+    <!--recyclerView的条目中的多张图片的纵向间距-->
+    <dimen name="dynamics_recyclerview_item_image_vertical_space_space">10px
+    </dimen><!--在清单文件中的设计图的大小-->
+
+    <!--发现里面的-->
+    <!--人气明星之间的间距-->
+    <dimen name="frag_find_popular_star_item_horizontal_space">32px</dimen><!--在清单文件中的设计图的大小-->
+
+    <!--=======================设置界面的=====================start===============================================-->
+
+
+    <!--=======================设置界面的=====================end=================================================-->
+
+
+    <!--=============这里定下项目中使用的一些标准,都是基于设计图的大小而言的======================================-->
+
+    <!--几乎用在每个界面,比如左内边距,右内边距-->
+    <dimen name="app_size_one">24px</dimen>
+    <dimen name="app_size_two">35px</dimen>
+
+    <!--三种常用的字体大小-->
+    <dimen name="app_text_size_one">24px</dimen>
+    <dimen name="app_text_size_two">28px</dimen>
+    <dimen name="app_text_size_three">34px</dimen>
+
+</resources>

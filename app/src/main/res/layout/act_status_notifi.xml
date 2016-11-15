@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/common_app_color"
+    tools:context=".modular.statusNotification.ui.StatusNotificationAct">
+
+    <!--引入红色的的标题栏-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <!--选项卡-->
+    <!--评论选项卡-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_act_status_notifi_tabhost"
+        tabIndicatorColor="@color/common_app_color"
+        tabSelectedTextColor="@color/common_app_color"
+        tabTextColor="@color/gray_two"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_act_titlebar_container" />
+
+    <!--显示评论和赞的viewpager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_act_status_notifi_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl_act_status_notifi_tabhost" />
+
+    <RelativeLayout
+        android:id="@+id/rl_foot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/white">
+
+    </RelativeLayout>
+
+</RelativeLayout>

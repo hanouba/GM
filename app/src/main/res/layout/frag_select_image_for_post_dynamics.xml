@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--显示图片的列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="430px" />
+
+    <!--显示相册文本和发送的按钮-->
+    <RelativeLayout
+        android:id="@+id/foot"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_below="@+id/rv"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/app_size_one"
+        android:paddingRight="@dimen/app_size_one">
+
+
+        <TextView
+            android:id="@+id/tv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one"
+            android:gravity="center_vertical"
+            android:text="相册"
+            android:textColor="@color/common_app_color"
+            android:textSize="28px" />
+
+        <Button
+            android:id="@+id/tv_send"
+            android:layout_width="160px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/red_solid_no_stroke_fillet_bg"
+            android:text="发送(0)"
+            android:textColor="@color/white"
+            android:textSize="24px" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

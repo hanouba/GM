@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--轮播图-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_frag_find_big_image"
+        android:layout_width="match_parent"
+        android:layout_height="360px"
+        android:background="@color/common_app_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="62px"
+        android:background="#77000000"
+        android:layout_alignBottom="@+id/vp_frag_find_big_image">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24px"
+            android:text="GameMaster"
+            android:textColor="@color/white"
+            android:textSize="@dimen/app_text_size_one" />
+
+        <!--指示器-->
+        <com.yoursecondworld.secondworld.common.view.XCircleIndicator
+            android:id="@+id/view_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginRight="24px"
+            app:fillColor="@color/white"
+            app:radius="8px"
+            app:strokeColor="@color/gray_serven" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_frag_find_part_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vp_frag_find_big_image"
+        android:layout_marginTop="14px">
+
+        <View
+            android:id="@+id/view_line_one"
+            android:layout_width="6px"
+            android:layout_height="60px"
+            android:layout_alignParentLeft="true"
+            android:background="@color/red_one" />
+
+        <TextView
+            android:id="@+id/tw_frag_find_part_one_tip_one"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_toRightOf="@+id/view_line_one"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10px"
+            android:text="人气明星"
+            android:textColor="@color/common_app_color"
+            android:textSize="24px" />
+
+        <View
+            android:id="@+id/view_line_three"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tw_frag_find_part_one_tip_one"
+            android:background="@color/gray_six" />
+
+
+        <!--用于显示人气明星-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_frag_find_part_one_popular_star"
+            android:layout_width="match_parent"
+            android:layout_height="232px"
+            android:layout_below="@+id/view_line_three"
+            android:background="@drawable/white_solid_no_stroke_fillet_bg" />
+
+        <View
+            android:id="@+id/view_line_two"
+            android:layout_width="6px"
+            android:layout_height="60px"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rcv_frag_find_part_one_popular_star"
+            android:layout_marginTop="14px"
+            android:background="@color/red_one" />
+
+        <TextView
+            android:id="@+id/tv_frag_find_part_one_tip_three"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_below="@+id/rcv_frag_find_part_one_popular_star"
+            android:layout_marginTop="14px"
+            android:layout_toRightOf="@+id/view_line_two"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10px"
+            android:text="热门状态"
+            android:textColor="@color/common_app_color"
+            android:textSize="24px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tv_frag_find_part_one_tip_three"
+            android:background="@color/gray_six" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

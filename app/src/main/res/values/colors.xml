@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--白色-->
+    <color name="white">#FFFFFF</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <color name="black1">#1E2229</color>
+
+    <!--整体的红色-->
+    <!--<color name="common_red">#C12332</color>-->
+    <color name="red_one">#E5023D</color>
+    <color name="common_app_color">#1E2229</color>
+
+
+    <!--这两个颜色用在发布动态界面的选择图片的界面的右上角的选中的时候和没有选中的时候的颜色-->
+    <color name="trans_common_red">#f63345</color>
+    <color name="trans_gray_three">#80696969</color>
+
+    <color name="dynamics_item_label">#999999</color>
+
+    <!--动态条目的第二个标签的描边和文字颜色-->
+    <color name="dynamics_item_label_two">#B0C589</color>
+
+
+    <!--灰色由浅到深-->
+    <color name="gray_one">#f5f5f5</color>
+    <color name="gray_two">#a7a7a7</color>
+    <color name="gray_three">#696969</color>
+    <color name="gray_four">#EAEAEA</color>
+    <color name="gray_five">#FDFDFD</color>
+    <color name="gray_six">#F2F2F2</color>
+    <color name="gray_serven">#666666</color>
+    <color name="gray_eight">#999999</color>
+
+    <color name="color_one" >#CCCCCC</color>
+
+    <!--登陆界面的按钮无效状态的颜色-->
+    <color name="bt_login_login_diseable_bg">#91959B</color>
+
+    <!--注册界面的竖直的分割线-->
+    <color name="register_split_line_bg">#f5f5f5</color>
+
+    <!--设置界面里面的所有条目的分割线颜色-->
+    <color name="setting_split_line_bg">#f5f5f5</color>
+    <!--设置界面里面的背景色-->
+    <color name="setting_bg">#f5f5f5</color>
+
+    <!--设置个人资料用到的颜色-->
+    <color name="iv_act_edit_person_info_sex_man">#696969</color><!--男性图标的颜色-->
+    <color name="iv_act_edit_person_info_sex_women">#ed9ce8</color><!--女性图标的颜色-->
+    <color name="bt_act_edit_person_info_complete">#696969</color><!--完成按钮背景颜色-->
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_one"
+    android:layout_width="match_parent"
+    android:layout_height="70px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58px"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="14px"
+        android:layout_marginLeft="6px"
+        android:layout_marginTop="14px"
+        android:layout_toLeftOf="@+id/tv_send"
+        android:background="@drawable/act_dynamics_detail_foot_message_bg"
+        android:paddingLeft="14px"
+        android:paddingRight="14px">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14px"
+            android:background="@null"
+            android:hint="回复xxx"
+            android:textSize="24px" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14px"
+        android:layout_marginRight="14px"
+        android:onClick="sendComment"
+        android:text="发送"
+        android:textSize="@dimen/app_text_size_two" />
+
+</RelativeLayout>
+

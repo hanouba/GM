@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:gravity="center"
+        android:text="删除"
+        android:textSize="28px" />
+
+    <View
+        android:id="@+id/view_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_delete"
+        android:background="@color/gray_two" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:layout_below="@+id/view_split_line"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="28px" />
+
+
+</RelativeLayout>

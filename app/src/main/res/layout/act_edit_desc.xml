@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.yoursecondworld.secondworld.modular.personInfo.view.EditDescAct">
+
+    <!--引入标题栏-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/gray_six">
+
+        <TextView
+            android:id="@+id/tv_desc_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_marginTop="30px"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_one"
+            android:text="更改你的签名内容" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc_tip"
+            android:layout_marginTop="14px"
+            android:background="@color/white"
+            android:padding="@dimen/app_size_one">
+
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textSize="@dimen/app_text_size_two"
+                android:hint="说点什么吧" />
+
+            <TextView
+                android:id="@+id/tv_desc_length_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/app_text_size_one"
+                android:layout_below="@+id/et_desc"
+                android:text="0/38" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/bt_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red_one"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/app_text_size_two" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

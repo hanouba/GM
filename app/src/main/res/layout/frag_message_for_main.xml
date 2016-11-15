@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/rl_frag_message_head"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/common_app_color"
+        android:paddingRight="@dimen/app_size_one">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:paddingLeft="@dimen/titlebar_left_and_right_padding"
+            android:paddingRight="@dimen/titlebar_left_and_right_padding"
+            android:layout_width="@dimen/iv_back_width"
+            android:layout_height="@dimen/iv_back_height"
+            android:paddingBottom="@dimen/titlebar_iv_top_and_bottom_padding"
+            android:paddingTop="@dimen/titlebar_iv_top_and_bottom_padding"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/white_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titlebar_title_text_size" />
+
+        <TextView
+            android:id="@+id/tv_frag_message_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="好友列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titlebar_text_size" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_notifi_message"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@+id/rl_frag_message_head"
+        android:gravity="center_vertical"
+        android:padding="20px">
+
+        <ImageView
+            android:id="@+id/iv_notifi_message_icon"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:src="@mipmap/tongzhi1" />
+
+        <TextView
+            android:id="@+id/tv_notifi_message_tip_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_notifi_message_icon"
+            android:text="动态通知"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_notifi_message_tip_one"
+            android:layout_marginTop="18px"
+            android:layout_toRightOf="@+id/iv_notifi_message_icon"
+            android:text=""
+            android:textSize="20px" />
+
+        <TextView
+            android:id="@+id/tv_new_number"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:background="@color/common_app_color"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textSize="24px" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/split_line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/rl_notifi_message"
+        android:background="@color/gray_one" />
+
+    <fragment
+        android:id="@+id/frag__frag_message_conversationlist"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/split_line" />
+
+
+</RelativeLayout>

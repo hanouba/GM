@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.yoursecondworld.secondworld.modular.allRelease.view.AllReleaseAct">
+
+    <!--引入红色的标题栏-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/white">
+
+        <!--搜索框-->
+        <RelativeLayout
+            android:id="@+id/rl_act_all_release_search"
+            android:layout_width="match_parent"
+            android:layout_height="66px"
+
+            android:background="#eeeeee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="11px"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one"
+            android:paddingTop="11px">
+
+            <EditText
+                android:id="@+id/et_act_all_release_search"
+                android:layout_width="match_parent"
+                android:layout_height="44px"
+                android:layout_marginRight="@dimen/app_size_one"
+                android:layout_toLeftOf="@+id/tv_header_search"
+                android:background="@drawable/white_solid_no_stroke_fillet_bg"
+                android:hint="搜索我的发布"
+                android:paddingLeft="@dimen/app_size_one"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_header_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="clickView"
+                android:text="搜索"
+                android:textColor="@color/common_app_color"
+                android:textSize="28px" />
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_act_all_release_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_act_all_release_search"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

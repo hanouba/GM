@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_act_select_contacts_item_radiobutton"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:src="@mipmap/radiobutton_selected1" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_act_select_contacts_item_icon"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/iv_act_select_contacts_item_radiobutton"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_act_select_contacts_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@+id/sdv_act_select_contacts_item_icon"
+            android:text="爱吃西瓜的大灰狼"
+            android:textSize="@dimen/app_text_size_two" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16px"
+            android:layout_marginRight="16px"
+            android:background="@color/gray_six" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

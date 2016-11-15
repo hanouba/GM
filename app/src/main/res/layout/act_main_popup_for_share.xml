@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200px">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_act_main_popup_for_share"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_marginTop="40px" />
+
+    <View
+        android:id="@+id/view_act_main_popup_for_share_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="102px"
+        android:layout_below="@+id/rv_act_main_popup_for_share"
+        android:background="@color/gray_two" />
+
+    <TextView
+        android:id="@+id/tv_act_main_popup_for_share_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:layout_below="@+id/view_act_main_popup_for_share_split_line"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="28px" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context=".modular.system.accountBind.ui.AccountBindAct">
+
+    <!--引入标题栏-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/gray_one">
+
+        <!--绑定微博-->
+        <RelativeLayout
+            android:id="@+id/rl_act_account_bind_weibo"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginTop="50px"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_act_account_bind_weibo"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:backgroundImage="@mipmap/logo_of_weibo2"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36px"
+                android:layout_toRightOf="@+id/sdv_act_account_bind_weibo"
+                android:text="微博绑定" />
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right_gray" />
+
+
+        </RelativeLayout>
+
+        <!--绑定微信-->
+        <RelativeLayout
+            android:id="@+id/rl_act_account_bind_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_below="@+id/rl_act_account_bind_weibo"
+            android:layout_marginTop="30px"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_act_account_bind_weixin"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:backgroundImage="@mipmap/logo_of_weixin2"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36px"
+                android:layout_toRightOf="@+id/sdv_act_account_bind_weixin"
+                android:text="微信绑定" />
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right_gray" />
+
+
+        </RelativeLayout>
+
+        <!--绑定QQ-->
+        <RelativeLayout
+            android:id="@+id/rl_act_account_bind_qq"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_below="@+id/rl_act_account_bind_weixin"
+            android:layout_marginTop="30px"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/app_size_one"
+            android:paddingRight="@dimen/app_size_one">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_act_account_bind_qq"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:backgroundImage="@mipmap/logo_of_qq2"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36px"
+                android:layout_toRightOf="@+id/sdv_act_account_bind_qq"
+                android:text="QQ绑定" />
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow_right_gray" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

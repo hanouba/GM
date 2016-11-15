@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_act_conversation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_act_titlebar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_app_color">
+
+        <RelativeLayout
+            android:id="@+id/rl_act_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_height"
+            android:paddingRight="@dimen/titlebar_left_and_right_padding">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/iv_back_width"
+                android:layout_height="@dimen/iv_back_height"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/titlebar_iv_top_and_bottom_padding"
+                android:paddingLeft="@dimen/titlebar_left_and_right_padding"
+                android:paddingRight="@dimen/titlebar_left_and_right_padding"
+                android:paddingTop="@dimen/titlebar_iv_top_and_bottom_padding"
+                android:src="@mipmap/white_back" />
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="改成你自己的名字"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titlebar_title_text_size" />
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/iv_back_width"
+                android:layout_height="@dimen/iv_back_height"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/arrow_bottom_white1"
+                android:paddingBottom="@dimen/titlebar_iv_top_and_bottom_padding"
+                android:paddingLeft="@dimen/titlebar_left_and_right_padding"
+                android:paddingRight="@dimen/titlebar_left_and_right_padding"
+                android:paddingTop="@dimen/titlebar_iv_top_and_bottom_padding"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_act_conversation_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container">
+
+        <fragment
+            android:name="io.rong.imkit.fragment.ConversationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

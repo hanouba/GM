@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/act_login_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".modular.prepareModule.register.view.RegisterAct">
+
+
+    <!--logo部分-->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="240px"
+        android:layout_height="140px"
+        android:layout_below="@+id/iv_act_guide_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116px"
+        android:src="@mipmap/logo_tip" />
+
+    <!--用户名的部分-->
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="380px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140px"
+        android:backgroundTint="@color/white"
+        android:inputType="phone"
+        android:gravity="center"
+        android:hint="输入手机"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_sendCheckCode"
+        android:layout_width="86px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_account"
+        android:layout_alignRight="@+id/et_account"
+        android:layout_marginBottom="24px"
+        android:layout_marginRight="8px"
+        android:background="@drawable/getcheckcode_bt_bg"
+        android:gravity="center"
+        android:padding="4px"
+        android:text="发送验证"
+        android:textColor="@color/white"
+        android:textSize="18px" />
+
+    <!--验证码-->
+    <EditText
+        android:id="@+id/et_check_code"
+        android:layout_width="380px"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90px"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:hint="输入验证"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="30px" />
+
+    <!--用户密码部分-->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="380px"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_check_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90px"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:hint="输入密码"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="30px" />
+    
+    <ImageView
+        android:id="@+id/iv_password_visiable_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/et_password"
+        android:padding="10px"
+        android:layout_alignBottom="@+id/et_password"
+        android:layout_marginBottom="18px"
+        android:src="@mipmap/password_visiable"/>
+
+
+    <Button
+        android:id="@+id/bt_act_register_register"
+        android:layout_width="380px"
+        android:layout_height="80px"
+        android:layout_below="@+id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80px"
+        android:background="@drawable/login_login_bt_diseable_bg"
+        android:text="注册"
+        android:textColor="#1E2229"
+        android:textSize="28px" />
+
+    <TextView
+        android:id="@+id/tv_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/bt_act_register_register"
+        android:layout_below="@+id/bt_act_register_register"
+        android:paddingTop="38px"
+        android:text="已有账号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/app_size_one" />
+
+    <!--第三方登录部分-->
+    <RelativeLayout
+        android:id="@+id/rl_act_login_other_login_container"
+        android:layout_width="match_parent"
+        android:layout_height="320px"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_third_login_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="34px"
+                android:layout_toLeftOf="@+id/tv_rl_act_login_other_login_tip_text"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_rl_act_login_other_login_tip_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="44px"
+                android:layout_marginRight="44px"
+                android:text="快速登录"
+                android:textColor="@color/white"
+                android:textSize="18px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="34px"
+                android:layout_toRightOf="@+id/tv_rl_act_login_other_login_tip_text"
+                android:background="@color/white" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_third_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_third_login_tip"
+            android:layout_marginBottom="52px"
+            android:layout_marginTop="68px">
+
+            <!--微信登陆-->
+            <RelativeLayout
+                android:id="@+id/rl_weixin_login_container"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_act_login_other_login_weixin"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_centerHorizontal="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:backgroundImage="@mipmap/logo_of_weixin"
+                    fresco:roundAsCircle="true" />
+
+            </RelativeLayout>
+
+            <!--微博登录-->
+            <RelativeLayout
+                android:id="@+id/rl_weibo_login_container"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_act_login_other_login_weibo"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_centerHorizontal="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:backgroundImage="@mipmap/logo_of_weibo"
+                    fresco:roundAsCircle="true" />
+
+            </RelativeLayout>
+
+            <!--qq登陆-->
+            <RelativeLayout
+                android:id="@+id/rl_qq_login_container"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_act_login_other_login_qq"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_centerHorizontal="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:backgroundImage="@mipmap/logo_of_qq"
+                    fresco:roundAsCircle="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_service_provision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_third_login"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/service_provision" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_flow_label_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="160px"
+        android:layout_height="44px"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/flow_label_bg">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_flow_label_item_icon"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6px"
+            android:src="@mipmap/ic_launcher"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_flow_label_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_flow_label_item_icon"
+            android:gravity="center"
+            android:text="梦幻西游啊"
+            android:textSize="18px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

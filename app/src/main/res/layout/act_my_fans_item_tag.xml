@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:background="@color/gray_one">
+
+        <TextView
+            android:id="@+id/tv_act_my_fans_item_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_size_one"
+            android:text="Tag"
+            android:textColor="@color/gray_three"
+            android:textSize="28px" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.yoursecondworld.secondworld.modular.main.ui.MainAct">
+
+    <!--用于切换fragment-->
+    <FrameLayout
+        android:id="@+id/fl_act_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_act_main_foot_container"
+        android:layout_below="@+id/rl_act_main_head" />
+
+    <!--底部的导航栏-->
+    <RelativeLayout
+        android:id="@+id/rl_act_main_foot_container"
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_act_main_foot_container"
+            android:layout_width="match_parent"
+            android:layout_height="94px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_six"
+            android:orientation="horizontal">
+
+            <!--首页-->
+            <RelativeLayout
+                android:id="@+id/rl_act_main_foot_home_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_act_main_foot_home"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/home_selected1" />
+
+                    <TextView
+                        android:id="@+id/tv_act_main_foot_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_act_main_foot_home"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"
+                        android:text="首页"
+                        android:textColor="@color/common_app_color"
+                        android:textSize="16px" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--发现-->
+            <RelativeLayout
+                android:id="@+id/rl_act_main_foot_master_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_act_main_foot_master"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/master_unselected1" />
+
+                    <TextView
+                        android:id="@+id/tv_act_main_foot_master"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_act_main_foot_master"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"
+                        android:text="MASTER"
+                        android:textColor="@color/black"
+                        android:textSize="16px" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--正中间的加号-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_act_main_foot_post"
+                        android:layout_width="40px"
+                        android:layout_height="40px" />
+
+                    <TextView
+                        android:id="@+id/tv_act_main_foot_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_act_main_foot_post"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16px" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--消息-->
+            <RelativeLayout
+                android:id="@+id/rl_act_main_foot_find_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_act_main_foot_find"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/find_unselected1" />
+
+                    <TextView
+                        android:id="@+id/tv_act_main_foot_find"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_act_main_foot_find"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"
+                        android:text="发现"
+                        android:textColor="@color/black"
+                        android:textSize="16px" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--我的-->
+            <RelativeLayout
+                android:id="@+id/rl_act_main_foot_my_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_act_main_foot_my"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/my_unselected1" />
+
+                    <TextView
+                        android:id="@+id/tv_act_main_foot_my"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_act_main_foot_my"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"
+                        android:text="我的"
+                        android:textColor="@color/black"
+                        android:textSize="16px" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/ll_act_main_foot_container"
+            android:background="@color/gray_six" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_post"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/ll_act_main_foot_container"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="15px"-->
+        <!--android:layout_marginTop="@dimen/act_main_foot_image_and_text_horizontal_space"-->
+        <!--android:text="发布"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16px" />-->
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_act_main_foot_add"
+        android:layout_width="86px"
+        android:layout_height="86px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30px"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/add1" />
+
+</RelativeLayout>

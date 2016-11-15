@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--个人资料-->
+    <RelativeLayout
+        android:id="@+id/rl_person_info"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginTop="50px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_person_info_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="22px"
+            android:text="你的个人资料"
+            android:textSize="24px" />
+
+        <ImageView
+            android:id="@+id/iv_edit_info"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:padding="8px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_person_info_tip"
+            android:src="@mipmap/edit1" />
+
+    </RelativeLayout>
+
+    <!--游戏标签-->
+    <RelativeLayout
+        android:id="@+id/rl_act_user_detail_viewpager_view_info_item_game_label"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@+id/rl_person_info"
+        android:layout_marginTop="30px"
+        android:paddingLeft="@dimen/app_size_one"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_act_user_detail_viewpager_view_info_item_game_label_tip"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="游戏标签"
+            android:textSize="24px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_games"
+            android:layout_toRightOf="@+id/tv_act_user_detail_viewpager_view_info_item_game_label_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <!--昵称-->
+    <RelativeLayout
+        android:id="@+id/rl_act_user_detail_viewpager_view_info_item_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@+id/rl_act_user_detail_viewpager_view_info_item_game_label"
+        android:layout_marginTop="14px"
+        android:background="@color/white"
+        android:padding="22px">
+
+        <TextView
+            android:id="@+id/tv_act_user_detail_viewpager_view_info_item_nickname_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="昵称"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_act_user_detail_viewpager_view_info_item_nickname_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_act_user_detail_viewpager_view_info_item_nickname_tip"
+            android:text="去吧屁啦求"
+            android:textSize="24px" />
+
+
+    </RelativeLayout>
+
+    <!--简介-->
+    <RelativeLayout
+        android:id="@+id/rl_act_user_detail_viewpager_view_info_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@+id/rl_act_user_detail_viewpager_view_info_item_nickname"
+        android:layout_marginTop="14px"
+        android:background="@color/white"
+        android:padding="22px">
+
+        <TextView
+            android:id="@+id/tv_act_user_detail_viewpager_view_info_item_desc_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="简介"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_act_user_detail_viewpager_view_info_item_dsec_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_act_user_detail_viewpager_view_info_item_desc_tip"
+            android:text="我有一只小毛驴,我从来都不骑~~~"
+            android:textSize="24px" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

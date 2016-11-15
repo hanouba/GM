@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xiaojinzi.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_frag_select_game"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/gv_frag_select_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/gray_three"
+        android:horizontalSpacing="36px"
+        android:numColumns="3"
+        android:padding="44px"
+        android:verticalSpacing="44px" />
+
+
+</xiaojinzi.autolayout.AutoRelativeLayout>

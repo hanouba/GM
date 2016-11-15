@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    tools:context=".modular.userDetail.view.UserDetailAct">
+
+    <!--内容-->
+    <RelativeLayout
+        android:id="@+id/rl_act_user_detail_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:layout_height="match_parent">
+
+        <!--显示内容的列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_act_user_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_six"/>
+
+    </RelativeLayout>
+
+    <!--标题栏-->
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <ImageView
+        android:id="@+id/iv_user_detail_back"
+        android:layout_width="32px"
+        android:layout_height="48px"
+        android:layout_marginLeft="@dimen/titlebar_left_and_right_padding"
+        android:src="@mipmap/white_back" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <!--<string name="app_name">GameMaster</string>-->
+    <string name="app_name">游戏掌控者</string>
+
+    <array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </array>
+
+    <string name="money1">¥</string>
+
+</resources>
